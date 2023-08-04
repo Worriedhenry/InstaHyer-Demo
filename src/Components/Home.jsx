@@ -6,10 +6,12 @@ import SearchBar from "./SearchBar";
 import OpportunityCard from "./OpportunityCard";
 import Footer from "./Footer";
 const StyledGrid = styled(Grid)(({ theme }) => ({
+    justifyContent:'space-between',
     [theme.breakpoints.down('sm')]: {
       fontSize:"0.5rem", 
       padding:"1px",
       MaxWidth:"100%",
+      justifyContent:'center',
       flexDirection:"column-reverse"
     },
   }));
@@ -49,17 +51,19 @@ export default function Home() {
                 <Grid item md={12}>
                     <Header />
                 </Grid>
-                <StyledGrid item container justifyContent='space-between ' md={12} pl={16} pt={5}>
-                    <Grid item md={2.75} xs={9} sm={6}>
+                <StyledGrid item container  md={12} sm={12} pr pl pt={5}>
+                    <Grid item md={2.75} xs={12} sm={3}justifyContent='center' container>
+                        <Grid item xs={8} sm={12} md={12}>
                         <Filters />
+                        </Grid>
                     </Grid>
-                    <Grid item container md={9} xs={12} height='fit-content'>
+                    <Grid item container md={9} mb={2} sm={8} xs={12}  height='fit-content'>
                         <Grid item md={11} xs={12} >
                             <SearchBar />
                         </Grid>
-                        <Grid item container md={12} >
+                        <Grid item container md={12} justifyContent='center'  >
                             {Opportunities.map((e)=>
-                            <Grid item md={11} xs={12} mt={2}>
+                            <Grid item md={11} xs={11} mt={2}>
                                 <OpportunityCard {...e} />
                             </Grid>
                             )

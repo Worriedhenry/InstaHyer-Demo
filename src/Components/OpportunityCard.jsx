@@ -14,7 +14,7 @@ const StyledHeading = styled(Typography)(({ theme }) => ({
 const StyledBody = styled(Typography)(({ theme }) => ({
     fontSize:'0.9rem',
     [theme.breakpoints.down('sm')]: {
-      fontSize:"0.5rem", 
+      fontSize:"0.6rem", 
       padding:"1px",
       MaxWidth:"100%"
     },
@@ -72,9 +72,8 @@ export default function OpportunityCard(props) {
                         <Grid item><Chip label="HTML"  /></Grid> 
                     </Grid>
                 </Grid>
-                <Grid item md={2} m p>
+                <Grid item md={2} xs={1.5} m p>
                     
-
                     <Button variant="contained" ><StyledBody>View</StyledBody></Button>
                     
                 </Grid>

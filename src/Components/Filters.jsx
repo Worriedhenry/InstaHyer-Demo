@@ -11,13 +11,13 @@ const SmallFormControlLabel = styled(FormControlLabel)`
   font-size: 12px; /* Adjust the font size as per your preference */
 `;
 const StyledBody = styled(Typography)(({ theme }) => ({
-    fontSize:'1rem',
+    fontSize: '1rem',
     [theme.breakpoints.down('sm')]: {
-      fontSize:"0.5rem", 
-      padding:"1px",
-      MaxWidth:"100%"
+        fontSize: "0.75rem",
+        padding: "1px",
+        MaxWidth: "100%"
     },
-  }));
+}));
 export default function Filters() {
     return (
         <>
@@ -26,10 +26,10 @@ export default function Filters() {
             >
                 <Grid item container
                     mb={5}
-                    height='35vh'
+                    height='fit-content'
                     padding={2}
                     bgcolor='white'>
-                    <Grid item><Typography fontWeight='bold'> Quick tip</Typography> </Grid>
+                    <Grid item xs={12}><Typography fontWeight='bold'> Quick tip</Typography> </Grid>
                     <Grid item color='#8A8A8A'><StyledBody variant="subtitle"> Since not all companies will go ahead, we encourage you to apply to several companies.</StyledBody> </Grid>
                     <Grid item color='#8A8A8A'><StyledBody variant="subtitle">
 
@@ -41,19 +41,19 @@ export default function Filters() {
                 <Grid item container
 
                     mb={5}
-                    height='30vh'
+                    height='fit-content'
                     padding={2}
                     bgcolor='white'>
                     <Grid item><Typography fontWeight='bold' fontSize='0.8rem'> Filter By Status  </Typography> </Grid>
-                    <Grid item md={12} fontSize='0.8rem'>
+                    <Grid item md={12} xs={12} fontSize='0.8rem' textAlign='left'>
                         <FormControl>
                             <RadioGroup
                                 aria-labelledby="demo-radio-buttons-group-label"
                                 defaultValue="female"
                                 name="radio-buttons-group"
-                                
+
                             >
-                                <SmallFormControlLabel style={{fontSize:"12px"}} value="female" control={<Radio size="small" />} label="Undecided (4)" />
+                                <SmallFormControlLabel style={{ fontSize: "12px" }} value="female" control={<Radio size="small" />} label="Undecided (4)" />
                                 <SmallFormControlLabel value="male" control={<Radio size="small" />} label="Interested (0)" />
                                 <FormControlLabel value="other" control={<Radio size="small" />} label="Not Interested (0)" />
                             </RadioGroup>
@@ -64,18 +64,18 @@ export default function Filters() {
             </Paper>
             <Paper>
                 <Grid item container
-
+                    justifyContent='left'
                     mb={5}
-                    height='30vh'
+                    height='fit-content'
                     padding={2}
                     bgcolor='white'>
                     <Grid item><Typography fontWeight='bold' fontSize='0.8rem'> Filter By size  </Typography> </Grid>
-                    <Grid item md={12} fontSize='0.8rem'>
-                    <FormGroup>
-      <FormControlLabel control={<Checkbox defaultChecked />} label="All" />
-      <FormControlLabel  control={<Checkbox />} label="Small" />
-      <FormControlLabel  control={<Checkbox />} label="Large" />
-    </FormGroup>
+                    <Grid item md={12} xs={12} container fontSize='0.8rem'>
+                        <FormGroup>
+                            <FormControlLabel control={<Checkbox defaultChecked />} label="All" />
+                            <FormControlLabel control={<Checkbox />} label="Small" />
+                            <FormControlLabel control={<Checkbox />} label="Large" />
+                        </FormGroup>
                     </Grid>
 
                 </Grid>

@@ -13,7 +13,6 @@ justify-content: center;
 
   }
 `;
-const menuItems = ['Activity']
 export default function Header() {
     console.log(window.innerWidth > 800)
     const [anchorEl, setAnchorEl] = useState(null);
@@ -62,24 +61,23 @@ export default function Header() {
                         </IconButton>
                         <Drawer
                             anchor='right'
-                            sx={{ width: '15vw', paddingLeft: '5vw' }}
                             open={anchorEl}
                             onClose={() => setAnchorEl(false)}
-                        >
-                            <Grid container>
-                                <HoverGridItem md={12} item>Activity</HoverGridItem>
-                                <HoverGridItem md={12} item>Opportunity</HoverGridItem>
-                                <HoverGridItem md={12} item>Inbox</HoverGridItem>
-                                <HoverGridItem md={12} item>Profile</HoverGridItem>
-                                <HoverGridItem md={12} item>Setting</HoverGridItem>
-                                <HoverGridItem md={12} item>SignOut</HoverGridItem>
+                        > 
+                            <Grid container maxWidth='40vw' bgcolor='#242424' color='white'>
+                                <HoverGridItem md={12 }xs={12} bgcolor='#242424' color='white' item>Activity</HoverGridItem>
+                                <HoverGridItem md={12} bgcolor='#242424' color='white' xs={12} item>Opportunity</HoverGridItem>
+                                <HoverGridItem md={12} bgcolor='#242424' color='white' xs={12} item>Inbox</HoverGridItem>
+                                <HoverGridItem md={12} bgcolor='#242424' color='white'  xs={12} item>Profile</HoverGridItem>
+                                <HoverGridItem md={12} bgcolor='#242424' color='white' xs={12} item>Setting</HoverGridItem>
+                                <HoverGridItem md={12} bgcolor='#242424' color='white' xs={12} item>SignOut</HoverGridItem>
                             </Grid>
                         </Drawer>
                     </Grid>
                 )}
 
                 {window.innerWidth > 800 && (
-                    <Grid item container justifyContent="space-between" height='100%' md={6}>
+                    <Grid item container justifyContent="space-between" height='100%' sm={6} md={6}>
                         <HoverGridItem md={2} item>Activity</HoverGridItem>
                         <HoverGridItem md={2} item>Opportunity</HoverGridItem>
                         <HoverGridItem md={2} item>Inbox</HoverGridItem>
@@ -90,10 +88,10 @@ export default function Header() {
                 )}
             </Grid>
             <Grid item container bgcolor='#4C5365' height='22vh' padding='9vh' color='white'>
-                <Grid item textAlign='center' md={12}>
+                <Grid item textAlign='center' xs={12} md={12}>
                     <Typography fontSize='1.5rem' >Showing 1 - 4 out of 4</Typography>
                 </Grid>
-                <Grid item textAlign='center' md={12}>
+                <Grid item textAlign='center' xs={12} md={12}>
                     <Typography fontSize='0.9rem' >recommended jobs for you</Typography>
                 </Grid>
             </Grid>

@@ -1,8 +1,7 @@
-# React + Vite
+# InstaHyer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Following is a single page frontend application which contains a home page of an hiring site.
 
-Currently, two official plugins are available:
+Here is the deployed link:-https://64cc726774696f4c604b9d9a--fastidious-cobbler-197022.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Teck Stack used-React+Vite powered by Material UI
